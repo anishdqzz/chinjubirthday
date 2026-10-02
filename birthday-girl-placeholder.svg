@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Replace this placeholder with Chinju's birthday photo">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8cbd8"/>
+      <stop offset="1" stop-color="#f4e1e5"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#db6688"/>
+      <stop offset="1" stop-color="#a94368"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#background)"/>
+  <circle cx="300" cy="290" r="132" fill="#f3c4b5"/>
+  <path d="M168 292c-13-115 39-191 132-191s145 76 132 191c-32-49-80-78-132-78s-100 29-132 78Z" fill="#513949"/>
+  <path d="M206 355c25 24 56 37 94 37s69-13 94-37l43 68c37 58 61 133 67 219H96c6-86 30-161 67-219l43-68Z" fill="url(#dress)"/>
+  <path d="M259 352c11 12 25 18 41 18s30-6 41-18l18 35-59 52-59-52 18-35Z" fill="#f3c4b5"/>
+  <circle cx="251" cy="291" r="8" fill="#513949"/>
+  <circle cx="349" cy="291" r="8" fill="#513949"/>
+  <path d="M270 331c18 18 42 18 60 0" fill="none" stroke="#b85870" stroke-linecap="round" stroke-width="7"/>
+  <text x="300" y="665" fill="#fff8fa" font-family="Georgia,serif" font-size="23" text-anchor="middle">Your photo will appear here</text>
+</svg>
