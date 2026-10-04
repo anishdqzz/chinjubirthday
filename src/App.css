@@ -187,8 +187,7 @@ button {
   box-shadow: 0 0 0 4px rgba(220, 108, 144, 0.12);
 }
 
-.login-button,
-.reveal-button {
+.login-button {
   border: 0;
   background: linear-gradient(135deg, #e96b94, #c63e6c);
   box-shadow: 0 12px 28px rgba(185, 55, 99, 0.27), inset 0 1px rgba(255, 255, 255, 0.42);
@@ -204,8 +203,7 @@ button {
   border-radius: 14px;
 }
 
-.login-button:hover:not(:disabled),
-.reveal-button:hover {
+.login-button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 16px 34px rgba(185, 55, 99, 0.34), inset 0 1px rgba(255, 255, 255, 0.42);
 }
@@ -216,7 +214,6 @@ button {
 }
 
 .login-button:focus-visible,
-.reveal-button:focus-visible,
 .upload-submit:focus-visible,
 .file-picker:focus-within,
 .photo-update summary:focus-visible,
@@ -309,15 +306,6 @@ button {
   text-transform: uppercase;
 }
 
-.reveal-button {
-  min-width: 190px;
-  min-height: 64px;
-  padding: 16px 34px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 999px;
-  font-size: 1.2rem;
-}
-
 .welcome-hint {
   margin: 22px 0 0;
   color: #956577;
@@ -383,8 +371,7 @@ button {
   line-height: 1.75;
 }
 
-.photo-update,
-.memories {
+.photo-update {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -506,18 +493,6 @@ button {
   font-weight: 700;
 }
 
-.memories {
-  padding: 20px;
-}
-
-.memories h2 {
-  margin: 0;
-  color: var(--rose-dark);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -604,5 +579,400 @@ button {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+:root {
+  color: #171717;
+  background: #f5f5f2;
+  --rose: #222;
+  --rose-dark: #111;
+  --rose-light: #eee;
+}
+
+body {
+  background: #f5f5f2;
+  color: #171717;
+}
+
+.scene {
+  background: transparent;
+}
+
+.sunflower-backdrop {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sunflower {
+  position: absolute;
+  width: clamp(105px, 18vw, 220px);
+  opacity: 0.88;
+  filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.12));
+}
+
+.sunflower-top-left {
+  top: -52px;
+  left: -45px;
+  transform: rotate(-18deg);
+}
+
+.sunflower-top-right {
+  top: -68px;
+  right: -40px;
+  transform: rotate(22deg) scale(0.82);
+}
+
+.sunflower-bottom-left {
+  bottom: -86px;
+  left: 3%;
+  transform: rotate(16deg) scale(0.85);
+}
+
+.sunflower-bottom-right {
+  right: -50px;
+  bottom: -65px;
+  transform: rotate(-14deg);
+}
+
+.sunflower-middle-right {
+  top: 43%;
+  right: 7%;
+  transform: rotate(12deg) scale(0.56);
+}
+
+.login-card,
+.birthday-card,
+.photo-update {
+  border-color: rgba(30, 30, 30, 0.16);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+}
+
+.login-card::before {
+  border-color: rgba(20, 20, 20, 0.12);
+}
+
+.login-icon {
+  background: #171717;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  color: #f4c62d;
+}
+
+.login-card .eyebrow,
+.eyebrow,
+.photo-update summary {
+  color: #292929;
+}
+
+.login-card h1,
+.birthday-card h1 {
+  color: #111;
+}
+
+.login-description,
+.login-form label,
+.login-footer,
+.welcome-hint,
+.birthday-message,
+.photo-update-content > p,
+.password-field,
+.selected-file,
+.form-message {
+  color: #555;
+}
+
+.login-form input,
+.password-field input {
+  border-color: #bdbdbd;
+  background: rgba(255, 255, 255, 0.94);
+  color: #171717;
+}
+
+.login-form input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 4px rgba(20, 20, 20, 0.1);
+}
+
+.login-button,
+.upload-submit {
+  border-color: #171717;
+  background: #171717;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-button:hover:not(:disabled) {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+}
+
+.login-button:focus-visible,
+.upload-submit:focus-visible,
+.file-picker:focus-within,
+.photo-update summary:focus-visible,
+.logout-button:focus-visible {
+  outline-color: #111;
+}
+
+.login-error,
+.error-message {
+  color: #222;
+}
+
+.login-spinner {
+  border-color: #ddd;
+  border-top-color: #171717;
+}
+
+.logout-button {
+  border-color: rgba(20, 20, 20, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  color: #171717;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background: #fff;
+}
+
+.authenticated-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 860px);
+}
+
+.welcome {
+  width: min(100%, 820px);
+  padding: 38px 18px;
+  animation: login-arrive 700ms ease both;
+}
+
+.welcome .eyebrow {
+  margin-bottom: 12px;
+}
+
+.archery-stage {
+  position: relative;
+  width: min(100%, 760px);
+  height: clamp(190px, 30vw, 250px);
+  margin: 0 auto;
+}
+
+.bow {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  width: clamp(66px, 10vw, 92px);
+  height: clamp(132px, 23vw, 180px);
+  color: #171717;
+  transform: translateY(-50%);
+}
+
+.flying-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: calc(8% + clamp(64px, 10vw, 92px));
+  width: clamp(82px, 13vw, 110px);
+  overflow: visible;
+  color: #171717;
+  transform: translateY(-50%);
+}
+
+.heart-target {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  display: grid;
+  width: clamp(72px, 12vw, 104px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid #171717;
+  border-radius: 50%;
+  background: #fff;
+  color: #171717;
+  font-size: clamp(2.7rem, 7vw, 4.3rem);
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform 250ms ease, background 250ms ease, color 250ms ease;
+}
+
+.is-shooting .heart-target {
+  animation: heart-hit 240ms 560ms ease both;
+}
+
+.flying-arrow {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.flying-arrow svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.flying-arrow:active,
+.is-dragging-arrow .flying-arrow {
+  cursor: grabbing;
+}
+
+.flying-arrow:disabled {
+  cursor: default;
+}
+
+.welcome-hint {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.birthday-photo {
+  filter: grayscale(1);
+}
+
+.portrait-frame {
+  border-color: rgba(20, 20, 20, 0.25);
+  background: #e8e8e5;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+
+.file-picker {
+  border-color: #999;
+  background: #f5f5f2;
+  color: #171717;
+}
+
+.upload-submit:hover:not(:disabled) {
+  background: #333;
+}
+
+.photo-card {
+  background: #eee;
+}
+
+.photo-card img {
+  filter: grayscale(1);
+}
+
+.success-message {
+  color: #333;
+}
+
+@keyframes heart-hit {
+  45% {
+    background: #f4c62d;
+    transform: translateY(-50%) scale(1.22);
+  }
+
+  100% {
+    background: #fff;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@media (max-width: 560px) {
+  .sunflower-middle-right {
+    top: 58%;
+    right: -32px;
+  }
+
+  .welcome {
+    padding: 30px 4px;
+  }
+
+  .archery-stage {
+    height: 190px;
+  }
+
+}
+
+.feature-panel {
+  overflow: hidden;
+}
+
+.feature-panel > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 16px;
+  padding: 19px 22px;
+  color: #171717;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.feature-summary-hint {
+  color: #686868;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.feature-panel[open] > summary {
+  border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+}
+
+.photo-update-content {
+  padding-top: 18px;
+}
+
+.photo-update-content .photo-grid {
+  margin-top: 22px;
+}
+
+.gallery-empty {
+  margin: 22px 0 0;
+  color: #666;
+  font-size: 0.92rem;
+}
+
+.love-letter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 22px 28px 26px;
+  color: #444;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.love-letter-content p {
+  margin: 0 0 14px;
+}
+
+.love-letter-content .love-letter-salutation,
+.love-letter-content .love-letter-signoff {
+  color: #171717;
+  font-style: italic;
+}
+
+.love-letter-content .love-letter-signoff {
+  margin: 20px 0 0;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .feature-panel > summary {
+    padding: 17px 18px;
+  }
+
+  .feature-summary-hint {
+    flex-basis: 100%;
+    margin-left: 25px;
+  }
+
+  .love-letter-content {
+    padding: 20px;
   }
 }
